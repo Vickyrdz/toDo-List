@@ -16,7 +16,7 @@ const Input = ({addTodo}) => {
     return (
         <div className="flex self-center">
             <input 
-                className="text-center mt-2 border-[0.063rem] border-gray text-gray rounded-3xl text-sm p-[0.125]" 
+                className="text-center mt-2 border-[0.063rem] border-gray text-gray rounded-3xl text-sm p-[0.125] lg:p-1 lg:mt-4" 
                 type="text" 
                 placeholder="Insert some task..." 
                 value={title}

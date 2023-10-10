@@ -8,7 +8,7 @@ const FiltersComponents = ({children}) => {
 
 const ItemsLeft = ({total }) => {
     return (
-        <p className="text-xs text-gray font-medium">
+        <p className="text-xs text-gray font-medium lg:text-sm">
             {total} Items 
         </p>
     )
@@ -17,7 +17,7 @@ const ItemsLeft = ({total }) => {
 
 const FilterButtonContainer = ({children}) => {
     return (
-        <div className="flex items-center gap-1 text-xs text-gray font-medium lg:ml-[3.563rem] lg:gap-[0.688rem]">
+        <div className="flex items-center gap-1 text-xs text-gray font-medium lg:ml-[3.563rem] lg:gap-[0.688rem] lg:text-sm">
             {children}
         </div>
     )
@@ -26,7 +26,7 @@ const FilterButtonContainer = ({children}) => {
 
 const FilterButton = ({action, active, filter }) => {
     return (
-        <button onClick={action} className={`hover:text-mediumBlue cursor-pointer transition-all duration-300 ease-out`
+        <button onClick={action} className={`hover:text-mediumBlue cursor-pointer transition-all duration-300 ease-out lg:text-sm`
         + (active.toLowerCase().includes(filter.toLowerCase()) ? `text-green-300` : `text-strongGray`)}>
             {filter}
         </button>
