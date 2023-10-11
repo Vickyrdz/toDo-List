@@ -1,17 +1,25 @@
 import Filters from "../Filters/Filters";
 import Todo from "../Todo/Todo";
 
-const TodoListContainer = ({todos, handleSetCompleted, handleDelete, activeFilter, showAllTodos, showActiveTodos, showCompletedTodos, handleClearCompleted}) => {
+const TodoListContainer = ({ todos,
+    handleSetCompleted,
+    handleDelete,
+    activeFilter,
+    showAllTodos,
+    showActiveFilter,
+    showCompletedTodos,
+    handleClearCompleted,
+}) => {
     return(
         <div className="flex justify-center mt-[1rem] flex-col items-center">
              <Filters
                 activeFilter={activeFilter}
                 total={todos.length}
                 showAllTodos={showAllTodos}
-                showActiveTodos={showActiveTodos}
+                showActiveTodos={showActiveFilter}
                 showCompletedTodos={showCompletedTodos}
-                handleClearCompleted={handleClearCompleted}/>
-            
+                handleClearCompleted={handleClearCompleted}
+            />
             {todos.map(todo => {
                 return(
                     <Todo 

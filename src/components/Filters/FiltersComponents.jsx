@@ -1,3 +1,8 @@
+// import i18next from "i18next";
+import { useTranslation } from "react-i18next";
+
+
+
 const FiltersComponents = ({children}) => {
     return (
         <div className="flex items-center justify-between p-3 w-11/12 mb-5 gap-5">
@@ -6,10 +11,12 @@ const FiltersComponents = ({children}) => {
     )
 };
 
-const ItemsLeft = ({total }) => {
+const ItemsLeft = ({ total }) => {
+    const { t } = useTranslation(["item"]);
+
     return (
         <p className="text-xs text-gray font-medium lg:text-sm">
-            {total} Items 
+            {t('item', {count: total})}
         </p>
     )
 };

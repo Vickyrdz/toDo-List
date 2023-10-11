@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 
 function App() {
 
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("todos")) || []);
   const [activeFilter, setActiveFilter] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState(todos)
 
@@ -26,6 +26,7 @@ function App() {
 
     const listTodo = [...todos]
     listTodo.push(newTodo);
+    localStorage.setItem("todos", JSON.stringify(listTodo));
     setTodos(listTodo); 
 
   };
