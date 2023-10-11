@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Input = ({addTodo}) => {
 
@@ -13,12 +14,14 @@ const Input = ({addTodo}) => {
         }
     }
 
+    const { t } = useTranslation(["input"]);
+ 
     return (
         <div className="flex self-center">
             <input 
                 className="text-center mt-2 border-[0.063rem] border-gray text-gray rounded-3xl text-sm p-[0.125] lg:p-1 lg:mt-4" 
                 type="text" 
-                placeholder="Insert some task..." 
+                placeholder={t("input")}
                 value={title}
                 onChange={changeTitle}
                 onKeyDown={e => handle(e)}
