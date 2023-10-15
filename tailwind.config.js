@@ -14,6 +14,8 @@ module.exports = {
         slowGray: "#f7f4f4",
         gray: "#9ca3af",
         strongGray: "#7a8089",
+        darkStrongGray: "#2c2c2c",
+        darkGray:"#444444",
         mediumBlue: "#4169e1",
       } 
     },
